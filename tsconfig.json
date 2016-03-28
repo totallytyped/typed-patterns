@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "jsx": "react",
+    "module": "commonjs"
+  },
+  "compileOnSave": false,
+  "filesGlob": [
+    "**/*.ts",
+    "**/*.tsx",
+    "!node_modules/**",
+    "!typings/browser/**/*",
+    "!typings/browser.d.ts"
+  ],
+  "files": [
+    "typings/main.d.ts",
+    "typings/main/ambient/react-dom/index.d.ts",
+    "typings/main/ambient/react/index.d.ts",
+    "src/index.tsx"
+  ],
+  "atom": {
+    "rewriteTsconfig": true,
+    "formatOnSave": true
+  }
+}

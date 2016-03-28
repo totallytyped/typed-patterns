@@ -1,0 +1,39 @@
+{
+  "name": "typed-patterns",
+  "version": "1.0.0",
+  "description": "GoF patterns in Typescript.",
+  "main": "index.js",
+  "scripts": {
+    "build:webpack": "npm run env NODE_ENV=production && webpack --config config/webpack.prod.js",
+    "build": "npm run clean && npm run build:webpack",
+    "clean": "rimraf build",
+    "start": "node dev-server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/totallytyped/typed-patterns.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/totallytyped/typed-patterns/issues"
+  },
+  "homepage": "https://github.com/totallytyped/typed-patterns#readme",
+  "dependencies": {
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "react-router": "^2.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1",
+    "ts-loader": "^0.8.1",
+    "typescript": "^1.8.9",
+    "react-transform-catch-errors": "^1.0.2",
+    "react-transform-hmr": "^1.0.2",
+    "rimraf": "^2.5.2",
+    "webpack-dev-middleware": "^1.5.1",
+    "webpack-hot-middleware": "^2.6.4"
+  }
+}
