@@ -16,6 +16,7 @@
     "typings/main.d.ts",
     "typings/main/ambient/react-dom/index.d.ts",
     "typings/main/ambient/react/index.d.ts",
+    "typings/main/definitions/history/index.d.ts",
     "typings/main/definitions/react-router/index.d.ts",
     "src/components/Main.tsx",
     "src/components/Menu.tsx",

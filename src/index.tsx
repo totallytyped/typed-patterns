@@ -1,6 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import { Router, Route, IndexRoute, hashHistory } from 'react-router';
+import { Router, Route, IndexRoute, useRouterHistory } from 'react-router';
+import { createHashHistory } from 'history';
 import PrismCode from './components/PrismCode';
 declare function require(name: string): any;
 
@@ -22,6 +23,17 @@ class About extends React.Component<{}, {}> {
     render() {
         return (
             <div>
+                <h1>About</h1>
+                blablabla
+            </div>
+        );
+    }
+}
+
+class Test extends React.Component<{}, {}> {
+    render() {
+        return (
+            <div>
                 <h1>Test</h1>
                 <PrismCode className="language-typescript">
                     {require('raw-loader!./examples/Test.tsx') }
@@ -32,24 +44,12 @@ class About extends React.Component<{}, {}> {
 }
 
 
-
-class Test extends React.Component<{}, {}> {
-    render() {
-        return (
-            <div>
-                <h1>Test</h1>
-                <PrismCode className="language-typescript line-numbers">
-                    {require('raw-loader!./examples/Test.tsx') }
-                </PrismCode>
-            </div>
-        );
-    }
-}
+const appHistory = useRouterHistory(createHashHistory)({ queryKey: false } as any);
 
 export default class App extends React.Component<{}, {}> {
     render() {
         return (
-            <Router history={hashHistory}>
+            <Router history={appHistory}>
                 <Route path="/" component={Main}>
                     <IndexRoute component={Index}></IndexRoute>
                     <Route path="about" component={About}></Route>

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "history": "registry:npm/history#2.0.0+20160214194820",
     "react-router": "registry:npm/react-router#2.0.0+20160214194820"
   },
   "ambientDependencies": {

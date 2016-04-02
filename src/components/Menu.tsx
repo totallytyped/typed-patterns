@@ -6,7 +6,7 @@ export default class App extends React.Component<{}, {}> {
         return (
             <ul>
                 <li>
-                    <Link activeClassName="active" to="/">Home</Link>
+                    <Link activeClassName="active" to="Test">Test</Link>
                 </li>
                 <li>
                     <Link activeClassName="active" to="About">About</Link>
