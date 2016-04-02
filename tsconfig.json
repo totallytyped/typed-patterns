@@ -5,6 +5,24 @@
     "module": "commonjs"
   },
   "compileOnSave": false,
+  "filesGlob": [
+    "**/*.ts",
+    "**/*.tsx",
+    "!node_modules/**",
+    "!typings/browser/**/*",
+    "!typings/browser.d.ts"
+  ],
+  "files": [
+    "typings/main.d.ts",
+    "typings/main/ambient/react-dom/index.d.ts",
+    "typings/main/ambient/react/index.d.ts",
+    "typings/main/definitions/react-router/index.d.ts",
+    "src/components/Main.tsx",
+    "src/components/Menu.tsx",
+    "src/components/PrismCode.tsx",
+    "src/examples/Test.tsx",
+    "src/index.tsx"
+  ],
   "formatCodeOptions": {
     "indentSize": 4,
     "tabSize": 4,
@@ -19,19 +37,6 @@
     "placeOpenBraceOnNewLineForFunctions": false,
     "placeOpenBraceOnNewLineForControlBlocks": false
   },
-  "filesGlob": [
-    "**/*.ts",
-    "**/*.tsx",
-    "!node_modules/**",
-    "!typings/browser/**/*",
-    "!typings/browser.d.ts"
-  ],
-  "files": [
-    "typings/main.d.ts",
-    "typings/main/ambient/react-dom/index.d.ts",
-    "typings/main/ambient/react/index.d.ts",
-    "src/index.tsx"
-  ],
   "atom": {
     "rewriteTsconfig": true,
     "formatOnSave": true
