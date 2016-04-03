@@ -17,8 +17,8 @@ export default class Main extends React.Component<{}, {}> {
                                 </a>
                             </li>*/}
                             <li>
-                                <a href="https://github.com/totallytyped/typed-patterns" className>
-                                    github
+                                <a href="https://github.com/totallytyped/typed-patterns">
+                                    Github
                                 </a>
                             </li>
                         </ul>
@@ -27,23 +27,19 @@ export default class Main extends React.Component<{}, {}> {
                 <section className="content wrap documentationContent">
                     <div className="nav-docs">
                         <div className="nav-docs-section">
-                            <h3>Main menu</h3>
+                            <h3>All patterns</h3>
                             <Menu />
                         </div>
                     </div>
                     <div className="inner-content">
-                        <h1>
-                            Overview
-                        </h1>
-                        <p>
-                            ololo
-                        </p>
                         {this.props.children}
                     </div>
                 </section>
-                <footer className="wrap">
-                    <div className="right">
-                        © 2016.
+                <footer>
+                    <div className="wrap">
+                        <div className="right">
+                            Typed Patterns © 2016
+                        </div>
                     </div>
                 </footer>
             </div>

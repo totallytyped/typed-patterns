@@ -23,10 +23,8 @@ export default class PrismCode extends React.Component<PrismCodeProps, {}> {
 
     render() {
         return (
-            <pre className={this.props.className}>
-                <code ref={(ref) => { this.codeNode = ref; } } className={this.props.className}>
-                    {this.props.children}
-                </code>
+            <pre ref={ (ref) => { this.codeNode = ref; } } className={this.props.className}>
+                {this.props.children}
             </pre>
         );
     }

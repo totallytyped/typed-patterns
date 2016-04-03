@@ -4,11 +4,8 @@
   "description": "GoF patterns in Typescript.",
   "main": "index.js",
   "scripts": {
-    "build:webpack": "npm run env NODE_ENV=production && webpack --config config/webpack.prod.js",
-    "build": "npm run clean && npm run build:webpack",
-    "clean": "rimraf build",
-    "start": "node dev-server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cross-env NODE_ENV=production webpack -p"
   },
   "repository": {
     "type": "git",
@@ -27,6 +24,7 @@
     "react-router": "^2.0.1"
   },
   "devDependencies": {
+    "cross-env": "^1.0.7",
     "css-loader": "^0.23.0",
     "raw-loader": "^0.5.1",
     "style-loader": "^0.13.0",

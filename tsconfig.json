@@ -18,10 +18,13 @@
     "typings/main/ambient/react/index.d.ts",
     "typings/main/definitions/history/index.d.ts",
     "typings/main/definitions/react-router/index.d.ts",
+    "src/components/Index.tsx",
     "src/components/Main.tsx",
     "src/components/Menu.tsx",
+    "src/components/Pattern.tsx",
     "src/components/PrismCode.tsx",
     "src/examples/Test.tsx",
+    "src/examples/Test2.tsx",
     "src/index.tsx"
   ],
   "formatCodeOptions": {

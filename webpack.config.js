@@ -1,4 +1,5 @@
 var path = require("path");
+var webpack = require('webpack');
 
 var config = {
     entry: ["./src/index.tsx"],
@@ -9,6 +10,7 @@ var config = {
     resolve: {
         extensions: ["", ".ts", ".tsx", ".js", ".jsx", ".css", ".styl"]
     },
+    plugins: [],
     module: {
         loaders: [
             {
@@ -17,17 +19,29 @@ var config = {
                 exclude: /node_modules|examples/
             }, {
                 test: /\.css$/,
-                loaders: [
-                    'style', 'css'
-                ]
+                loaders: ['style', 'css']
             }, {
                 test: /\.styl$/,
-                loaders: [
-                    'style', 'css', 'stylus'
-                ]
+                loaders: ['style', 'css', 'stylus']
             }
         ]
     }
 };
+
+if (process.env.NODE_ENV === 'production') {
+    config.plugins = [
+        new webpack.optimize.OccurrenceOrderPlugin(),
+        new webpack.DefinePlugin({
+            'process.env': {
+                'NODE_ENV': JSON.stringify('production')
+            }
+        }),
+        new webpack.optimize.UglifyJsPlugin({
+            compressor: {
+                warnings: false
+            }
+        })
+    ]
+}
 
 module.exports = config;
