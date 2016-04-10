@@ -12,14 +12,24 @@ import Pattern from './components/Pattern.tsx';
 
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false } as any);
 
+class Test extends React.Component<{}, {}> {
+    render() {
+        return (
+            <div>
+                test index
+            </div>
+        );
+    }
+}
+
 export default class App extends React.Component<{}, {}> {
     render() {
         return (
             <Router history={appHistory}>
-                <Route path="/" component={Main}>
+                <Route path="/" component={Test}></Route>
+                <Route path="/patterns/" component={Main}>
                     <IndexRoute component={Index}></IndexRoute>
-                    <Route path="patterns(/:test)" component={Pattern}></Route>
-                    <Route path="*" component={Index}></Route>
+                    <Route path="(:test)" component={Pattern}></Route>
                 </Route>
             </Router>
         );
