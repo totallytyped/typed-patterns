@@ -2,6 +2,8 @@ import * as React from 'react';
 import PrismCode from './PrismCode';
 declare function require(name: string): any;
 
+import { capitalizeFirstLetter } from '../utils';
+
 
 export const patterns = {
     'observer': {},
@@ -21,7 +23,7 @@ export default class Pattern extends React.Component<{ params: any; }, {}> {
             <div>
                 { patterns[this.props.params.test.toLowerCase()] ?
                     <div>
-                        <h1>{this.props.params.test}</h1>
+                        <h1>{ capitalizeFirstLetter(this.props.params.test) }</h1>
                         <h2>Реализация</h2>
                         <PrismCode className="language-typescript">
                             {patterns[this.props.params.test.toLowerCase()].implementation}

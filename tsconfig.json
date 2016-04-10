@@ -18,6 +18,7 @@
     "src/patterns/observer/implementation.ts",
     "src/patterns/proxy/example.ts",
     "src/patterns/proxy/implementation.ts",
+    "src/utils.ts",
     "typings/main.d.ts",
     "typings/main/ambient/react-dom/index.d.ts",
     "typings/main/ambient/react/index.d.ts",
@@ -30,8 +31,6 @@
     "src/components/Patterns.tsx",
     "src/components/PatternsIndex.tsx",
     "src/components/PrismCode.tsx",
-    "src/examples/Test.tsx",
-    "src/examples/Test2.tsx",
     "src/index.tsx"
   ],
   "formatCodeOptions": {
