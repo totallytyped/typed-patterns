@@ -16,7 +16,7 @@ var config = {
             {
                 test: /\.tsx?$/,
                 loader: "ts-loader",
-                exclude: /node_modules|examples/
+                exclude: /node_modules|example|implementation/
             }, {
                 test: /\.css$/,
                 loaders: ['style', 'css']

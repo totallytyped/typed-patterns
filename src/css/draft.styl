@@ -1,3 +1,6 @@
+$main-color = #45A5D4;
+$second-color = #3783A9;
+
 html {
   background-color: #fffcfc;
   color: #484848;
@@ -90,13 +93,13 @@ li {
 }
 
 a {
-  color: #C15757;
+  color: $main-color;
   font-weight: 400;
   text-decoration: none;
 }
 
 a:hover, a:focus {
-  color: #823030;
+  color: #2B6886;
   text-decoration: none;
 }
 
@@ -120,7 +123,7 @@ html * {
   font-family: 'source-code-pro', Menlo, 'Courier New', Consolas, monospace;
   font-size: 13px;
   line-height: 20px;
-  border-left: 4px solid #843131;
+  border-left: 4px solid $main-color;
   padding: 5px 10px;
   margin-left: 20px;
   background-color: rgba(132, 49, 49, 0.05);
@@ -269,7 +272,7 @@ h1:hover .hash-link, h2:hover .hash-link, h3:hover .hash-link, h4:hover .hash-li
 
 .nav-main .nav-site a.active {
   color: #fafafa;
-  border-bottom: 3px solid #C15757;
+  border-bottom: 3px solid $main-color;
   background: #333;
 }
 
@@ -280,7 +283,7 @@ h1:hover .hash-link, h2:hover .hash-link, h3:hover .hash-link, h4:hover .hash-li
 }
 
 .nav-home a {
-  color: #C15757;
+  color: $main-color;
 }
 
 .nav-home img {
@@ -299,7 +302,7 @@ h1:hover .hash-link, h2:hover .hash-link, h3:hover .hash-link, h4:hover .hash-li
 }
 
 .hero {
-  background: #843131;
+  background: $main-color;
   padding: 50px 0;
   color: #FDF3E7;
   font-weight: 300;
@@ -330,13 +333,13 @@ h1:hover .hash-link, h2:hover .hash-link, h3:hover .hash-link, h4:hover .hash-li
 }
 
 .buttons-unit .button {
-  background: #843131;
+  background: $main-color;
   color: #fff;
   font-size: 24px;
 }
 
 .buttons-unit .button:active {
-  background: #C15757;
+  background: $main-color;
 }
 
 .buttons-unit.downloads {
@@ -374,12 +377,12 @@ h1:hover .hash-link, h2:hover .hash-link, h3:hover .hash-link, h4:hover .hash-li
 }
 
 .nav-docs a:hover {
-  color: #C15757;
+  color: $main-color;
   text-decoration: none;
 }
 
 .nav-docs a.active {
-  color: #C15757;
+  color: $main-color;
 }
 
 .nav-docs .nav-docs-section {
@@ -950,7 +953,7 @@ p + .apiIndex {
   text-decoration: none;
 }
 .apiIndex li a:hover::before {
-  color: #C15757;
+  color: $main-color;
   content: '#';
   font-size: 16px;
   left: -2em;
@@ -1302,7 +1305,7 @@ pre[class*="language-"],
 pre[class*="language-"],
 .apiIndex li {
   background-color: rgba(75, 145, 80, 0.05);
-  border-left: 4px solid #C15757;
+  border-left: 4px solid $main-color;
   font-size: 13px;
   line-height: 20px;
   padding: 5px 10px;

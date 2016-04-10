@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 
-export default class Index extends React.Component<{}, {}> {
+export default class PatternsIndex extends React.Component<{}, {}> {
     render() {
         return (
             <div>

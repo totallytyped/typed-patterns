@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { Link } from 'react-router';
 
-import Menu from './Menu';
 
 export default class Main extends React.Component<{}, {}> {
     render() {
@@ -11,11 +10,9 @@ export default class Main extends React.Component<{}, {}> {
                     <div className="wrap">
                         <Link className="nav-home" to="/">Typed Patterns</Link>
                         <ul className="nav-site">
-                            {/*<li>
-                                <a href="/" className="active">
-                                    docs
-                                </a>
-                            </li>*/}
+                            <li>
+                                <Link activeClassName="active" to="/patterns">Patterns</Link>
+                            </li>
                             <li>
                                 <a href="https://github.com/totallytyped/typed-patterns">
                                     Github
@@ -24,17 +21,7 @@ export default class Main extends React.Component<{}, {}> {
                         </ul>
                     </div>
                 </nav>
-                <section className="content wrap documentationContent">
-                    <div className="nav-docs">
-                        <div className="nav-docs-section">
-                            <h3>All patterns</h3>
-                            <Menu />
-                        </div>
-                    </div>
-                    <div className="inner-content">
-                        {this.props.children}
-                    </div>
-                </section>
+                {this.props.children}
                 <footer>
                     <div className="wrap">
                         <div className="right">

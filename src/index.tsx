@@ -4,37 +4,32 @@ import { Router, Route, IndexRoute, useRouterHistory } from 'react-router';
 import { createHashHistory } from 'history';
 
 import './css/main.styl';
-import './css/draft.css';
+import './css/draft.styl';
 
 import Main from './components/Main.tsx';
-import Index from './components/Index.tsx';
+import MainIndex from './components/MainIndex.tsx';
+import Patterns from './components/Patterns.tsx';
+import PatternsIndex from './components/PatternsIndex.tsx';
 import Pattern from './components/Pattern.tsx';
 
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false } as any);
-
-class Test extends React.Component<{}, {}> {
-    render() {
-        return (
-            <div>
-                test index
-            </div>
-        );
-    }
-}
 
 export default class App extends React.Component<{}, {}> {
     render() {
         return (
             <Router history={appHistory}>
-                <Route path="/" component={Test}></Route>
-                <Route path="/patterns/" component={Main}>
-                    <IndexRoute component={Index}></IndexRoute>
-                    <Route path="(:test)" component={Pattern}></Route>
+                <Route path="/" component={Main}>
+                    <IndexRoute component={MainIndex}></IndexRoute>
+                    <Route path="patterns" component={Patterns}>
+                        <IndexRoute component={PatternsIndex}></IndexRoute>
+                        <Route path="(:test)" component={Pattern}></Route>
+                    </Route>
                 </Route>
             </Router>
         );
     }
 }
+
 
 
 ReactDOM.render(<App />, document.getElementById('app'));

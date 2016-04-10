@@ -4,16 +4,13 @@ declare function require(name: string): any;
 
 
 export const patterns = {
-    'Test': {
-        codeExample: ''
-    },
-    'Test2': {
-        codeExample: ''
-    }
+    'observer': {},
+    'proxy': {}
 };
 
 Object.keys(patterns).forEach((e) => {
-    patterns[e].codeExample = require(`raw-loader!../examples/${e}.tsx`);
+    patterns[e].example = require(`raw-loader!../patterns/${e}/example.ts`);
+    patterns[e].implementation = require(`raw-loader!../patterns/${e}/implementation.ts`);
 });
 
 console.log(patterns);
@@ -22,11 +19,16 @@ export default class Pattern extends React.Component<{ params: any; }, {}> {
     render() {
         return (
             <div>
-                { patterns[this.props.params.test] ?
+                { patterns[this.props.params.test.toLowerCase()] ?
                     <div>
                         <h1>{this.props.params.test}</h1>
+                        <h2>Реализация</h2>
                         <PrismCode className="language-typescript">
-                            {patterns[this.props.params.test].codeExample}
+                            {patterns[this.props.params.test.toLowerCase()].implementation}
+                        </PrismCode>
+                        <h2>Пример</h2>
+                        <PrismCode className="language-typescript">
+                            {patterns[this.props.params.test.toLowerCase()].example}
                         </PrismCode>
                     </div> :
                     <div>
