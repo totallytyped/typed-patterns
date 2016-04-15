@@ -11,8 +11,8 @@ export const patterns = {
 };
 
 Object.keys(patterns).forEach((e) => {
-    patterns[e].example = require(`raw-loader!../patterns/${e}/example.ts`);
-    patterns[e].implementation = require(`raw-loader!../patterns/${e}/implementation.ts`);
+    patterns[e].example = require(`!!raw-loader!../patterns/${e}/example.ts`);
+    patterns[e].implementation = require(`!!raw-loader!../patterns/${e}/implementation.ts`);
 });
 
 console.log(patterns);
