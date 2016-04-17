@@ -2,10 +2,18 @@ var path = require("path");
 var webpack = require('webpack');
 
 var config = {
-    entry: ["./src/index.tsx"],
+    entry: {
+      "app": "./src/index.tsx",
+      "vendors": [
+        // "./vendors/backbone-min.js",
+        // "./vendors/joint.min.js",
+        // "./vendors/jquery.min.js",
+        // "./vendors/lodash.min.js"
+      ]
+    },
     output: {
         path: path.resolve(__dirname, "build"),
-        filename: "app.js"
+        filename: "[name].js"
     },
     resolve: {
         extensions: ["", ".ts", ".tsx", ".js", ".jsx", ".css", ".styl"]

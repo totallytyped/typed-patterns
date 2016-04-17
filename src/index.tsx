@@ -5,6 +5,7 @@ import { createHashHistory } from 'history';
 
 import './css/main.styl';
 import './css/draft.styl';
+import '../vendors/joint.min.css';
 
 import Main from './components/Main.tsx';
 import MainIndex from './components/MainIndex.tsx';
@@ -29,7 +30,6 @@ export default class App extends React.Component<{}, {}> {
         );
     }
 }
-
 
 
 ReactDOM.render(<App />, document.getElementById('app'));
