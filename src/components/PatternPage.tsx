@@ -1,8 +1,8 @@
 import * as React from 'react';
 import PrismCode from './PrismCode';
-declare function require(name: string): any;
-
 import { capitalizeFirstLetter } from '../utils';
+
+declare function require(name: string): any;
 
 
 export const patterns = {
@@ -10,7 +10,7 @@ export const patterns = {
     'proxy': {}
 };
 
-Object.keys(patterns).forEach((e) => {
+Object.keys(patterns).forEach(e => {
     patterns[e].example = require(`!!raw-loader!../patterns/${e}/example.ts`);
     patterns[e].implementation = require(`!!raw-loader!../patterns/${e}/implementation.ts`);
     patterns[e].makeUml = require(`../patterns/${e}/uml.ts`).default;
@@ -18,7 +18,7 @@ Object.keys(patterns).forEach((e) => {
 
 console.log(patterns);
 
-export default class Pattern extends React.Component<{ params: any; }, {}> {
+export default class PatternPage extends React.Component<{ params: any; }, {}> {
     umlWrapper: HTMLDivElement;
 
     componentDidMount() {
@@ -28,9 +28,9 @@ export default class Pattern extends React.Component<{ params: any; }, {}> {
     render() {
         return (
             <div>
-                { patterns[this.props.params.test.toLowerCase()] ?
+                {patterns[this.props.params.test.toLowerCase()] ?
                     <div>
-                        <h1>{ capitalizeFirstLetter(this.props.params.test) }</h1>
+                        <h1>{capitalizeFirstLetter(this.props.params.test)}</h1>
                         <h2>Реализация</h2>
                         <PrismCode className="language-typescript">
                             {patterns[this.props.params.test.toLowerCase()].implementation}

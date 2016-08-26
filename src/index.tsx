@@ -1,3 +1,4 @@
+// tslint:disable-next-line:no-unused-variable
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Router, Route, IndexRoute, useRouterHistory } from 'react-router';
@@ -7,29 +8,24 @@ import './css/main.styl';
 import './css/draft.styl';
 import '../vendors/joint.min.css';
 
-import Main from './components/Main.tsx';
-import MainIndex from './components/MainIndex.tsx';
-import Patterns from './components/Patterns.tsx';
+import Layout from './components/Layout.tsx';
+import IndexPage from './components/IndexPage.tsx';
+import PatternsLayout from './components/PatternsLayout.tsx';
 import PatternsIndex from './components/PatternsIndex.tsx';
-import Pattern from './components/Pattern.tsx';
+import PatternPage from './components/PatternPage.tsx';
 
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false } as any);
 
-export default class App extends React.Component<{}, {}> {
-    render() {
-        return (
-            <Router history={appHistory}>
-                <Route path="/" component={Main}>
-                    <IndexRoute component={MainIndex}></IndexRoute>
-                    <Route path="patterns" component={Patterns}>
-                        <IndexRoute component={PatternsIndex}></IndexRoute>
-                        <Route path="(:test)" component={Pattern}></Route>
-                    </Route>
-                </Route>
-            </Router>
-        );
-    }
-}
+const App = () =>
+    <Router history={appHistory}>
+        <Route path="/" component={Layout}>
+            <IndexRoute component={IndexPage}></IndexRoute>
+            <Route path="patterns" component={PatternsLayout}>
+                <IndexRoute component={PatternsIndex}></IndexRoute>
+                <Route path="(:test)" component={PatternPage}></Route>
+            </Route>
+        </Route>
+    </Router>;
 
 
 ReactDOM.render(<App />, document.getElementById('app'));

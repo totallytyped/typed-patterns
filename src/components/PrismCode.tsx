@@ -1,13 +1,12 @@
-import * as React from "react";
+import * as React from 'react';
 
-declare const Prism: any;
 
-interface PrismCodeProps {
+interface Props {
     async?: boolean;
     className?: string;
 }
 
-export default class PrismCode extends React.Component<PrismCodeProps, {}> {
+export default class extends React.Component<Props, {}> {
     codeNode: HTMLElement;
     componentDidMount() {
         this._hightlight();
@@ -23,7 +22,7 @@ export default class PrismCode extends React.Component<PrismCodeProps, {}> {
 
     render() {
         return (
-            <pre ref={ (ref) => { this.codeNode = ref; } } className={this.props.className}>
+            <pre ref={(ref) => { this.codeNode = ref; } } className={this.props.className}>
                 {this.props.children}
             </pre>
         );

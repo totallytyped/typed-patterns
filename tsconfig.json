@@ -2,35 +2,34 @@
   "compilerOptions": {
     "target": "es5",
     "jsx": "react",
-    "module": "commonjs"
+    "module": "commonjs",
+    "noEmit": true
   },
   "compileOnSave": false,
   "filesGlob": [
-    "**/*.ts",
-    "**/*.tsx",
+    "./src/**/*.ts",
+    "./src/**/*.tsx",
     "!node_modules/**",
-    "!typings/browser/**/*",
-    "!typings/browser.d.ts",
-    "!typings/main/**/*"
+    "typings/index.d.ts"
   ],
   "files": [
-    "src/patterns/decorator/implementation.ts",
-    "src/patterns/observer/example.ts",
-    "src/patterns/observer/implementation.ts",
-    "src/patterns/observer/uml.ts",
-    "src/patterns/proxy/example.ts",
-    "src/patterns/proxy/implementation.ts",
-    "src/patterns/proxy/uml.ts",
-    "src/utils.ts",
-    "typings/main.d.ts",
-    "src/components/Main.tsx",
-    "src/components/MainIndex.tsx",
-    "src/components/Menu.tsx",
-    "src/components/Pattern.tsx",
-    "src/components/Patterns.tsx",
-    "src/components/PatternsIndex.tsx",
-    "src/components/PrismCode.tsx",
-    "src/index.tsx"
+    "./src/patterns/decorator/implementation.ts",
+    "./src/patterns/observer/example.ts",
+    "./src/patterns/observer/implementation.ts",
+    "./src/patterns/observer/uml.ts",
+    "./src/patterns/proxy/example.ts",
+    "./src/patterns/proxy/implementation.ts",
+    "./src/patterns/proxy/uml.ts",
+    "./src/utils.ts",
+    "./src/components/IndexPage.tsx",
+    "./src/components/Layout.tsx",
+    "./src/components/Menu.tsx",
+    "./src/components/PatternPage.tsx",
+    "./src/components/PatternsIndex.tsx",
+    "./src/components/PatternsLayout.tsx",
+    "./src/components/PrismCode.tsx",
+    "./src/index.tsx",
+    "typings/index.d.ts"
   ],
   "formatCodeOptions": {
     "indentSize": 4,

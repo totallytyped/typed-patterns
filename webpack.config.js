@@ -4,12 +4,7 @@ var webpack = require('webpack');
 var config = {
     entry: {
       "app": "./src/index.tsx",
-      "vendors": [
-        // "./vendors/backbone-min.js",
-        // "./vendors/joint.min.js",
-        // "./vendors/jquery.min.js",
-        // "./vendors/lodash.min.js"
-      ]
+      "vendors": ['./vendors/prism.js']
     },
     output: {
         path: path.resolve(__dirname, "build"),
