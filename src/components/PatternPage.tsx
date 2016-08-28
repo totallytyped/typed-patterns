@@ -22,22 +22,23 @@ export default class PatternPage extends React.Component<{ params: any; }, {}> {
     umlWrapper: HTMLDivElement;
 
     componentDidMount() {
-        patterns[this.props.params.test.toLowerCase()].makeUml(this.umlWrapper);
+        patterns[this.props.params.patternName.toLowerCase()].makeUml(this.umlWrapper);
     }
 
     render() {
+        const patternName = this.props.params.patternName.toLowerCase();
         return (
             <div>
-                {patterns[this.props.params.test.toLowerCase()] ?
+                {patterns[patternName] ?
                     <div>
-                        <h1>{capitalizeFirstLetter(this.props.params.test)}</h1>
+                        <h1>{capitalizeFirstLetter(patternName)}</h1>
                         <h2>Реализация</h2>
                         <PrismCode className="language-typescript">
-                            {patterns[this.props.params.test.toLowerCase()].implementation}
+                            {patterns[patternName].implementation}
                         </PrismCode>
                         <h2>Пример</h2>
                         <PrismCode className="language-typescript">
-                            {patterns[this.props.params.test.toLowerCase()].example}
+                            {patterns[patternName].example}
                         </PrismCode>
                         <h2>Диаграмма</h2>
                         <div ref={ref => this.umlWrapper = ref}></div>

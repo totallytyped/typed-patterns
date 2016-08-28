@@ -22,7 +22,7 @@ const App = () =>
             <IndexRoute component={IndexPage}></IndexRoute>
             <Route path="patterns" component={PatternsLayout}>
                 <IndexRoute component={PatternsIndex}></IndexRoute>
-                <Route path="(:test)" component={PatternPage}></Route>
+                <Route path="(:patternName)" component={PatternPage}></Route>
             </Route>
         </Route>
     </Router>;
