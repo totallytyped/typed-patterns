@@ -9,20 +9,20 @@ interface Props {
 export default class extends React.Component<Props, {}> {
     codeNode: HTMLElement;
     componentDidMount() {
-        this._hightlight();
+        this.hightlight();
     }
 
     componentDidUpdate() {
-        this._hightlight();
+        this.hightlight();
     }
 
-    _hightlight() {
+    hightlight() {
         Prism.highlightElement(this.codeNode, this.props.async);
     }
 
     render() {
         return (
-            <pre ref={(ref) => { this.codeNode = ref; } } className={this.props.className}>
+            <pre ref={ref => this.codeNode = ref} className={this.props.className}>
                 {this.props.children}
             </pre>
         );

@@ -2,7 +2,8 @@
     "compilerOptions": {
         "target": "es5",
         "jsx": "react",
-        "module": "commonjs"
+        "module": "commonjs",
+        "noEmit": true
     },
     "filesGlob": [
         "./src/**/*.ts",

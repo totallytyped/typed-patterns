@@ -28,6 +28,11 @@ var config = {
                 loaders: ['style', 'css', 'stylus']
             }
         ]
+    },
+    ts: {
+        compilerOptions: {
+            noEmit: false
+        }
     }
 };
 
