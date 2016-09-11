@@ -7,6 +7,7 @@
     "react-router": "registry:npm/react-router#2.4.0+20160811060709"
   },
   "globalDependencies": {
-    "prism": "registry:dt/prism#1.4.4+20160321233308"
+    "prism": "registry:dt/prism#1.4.4+20160321233308",
+    "jest": "registry:dt/jest#0.9.0+20160706021812"
   }
 }
