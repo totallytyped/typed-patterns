@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+    - "6"
+branches:
+    only:
+      - "master"
+notifications:
+    email: false
+install:
+    - "npm run prepare"
+script:
+    - "npm run test"
+    - "npm run build"
