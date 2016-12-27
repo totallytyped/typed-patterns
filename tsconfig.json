@@ -3,37 +3,11 @@
         "target": "es5",
         "jsx": "react",
         "module": "commonjs",
-        "noEmit": true
+        "noEmit": true,
+        "importHelpers": true
     },
-    "filesGlob": [
-        "./src/**/*.ts",
-        "./src/**/*.tsx",
-        "!node_modules/**",
-        "typings/index.d.ts",
-        "./__tests__/**/*.tsx"
-    ],
     "compileOnSave": false,
     "buildOnSave": false,
-    "files": [
-        "./src/patterns/decorator/implementation.ts",
-        "./src/patterns/observer/example.ts",
-        "./src/patterns/observer/implementation.ts",
-        "./src/patterns/observer/uml.ts",
-        "./src/patterns/proxy/example.ts",
-        "./src/patterns/proxy/implementation.ts",
-        "./src/patterns/proxy/uml.ts",
-        "./src/utils.ts",
-        "./src/components/IndexPage.tsx",
-        "./src/components/Layout.tsx",
-        "./src/components/Menu.tsx",
-        "./src/components/PatternPage.tsx",
-        "./src/components/PatternsIndex.tsx",
-        "./src/components/PatternsLayout.tsx",
-        "./src/components/PrismCode.tsx",
-        "./src/index.tsx",
-        "typings/index.d.ts",
-        "./__tests__/indexPage.test.tsx"
-    ],
     "formatCodeOptions": {
         "indentSize": 4,
         "tabSize": 4,
@@ -49,7 +23,7 @@
         "placeOpenBraceOnNewLineForControlBlocks": false
     },
     "atom": {
-        "rewriteTsconfig": true,
+        "rewriteTsconfig": false,
         "formatOnSave": true
     }
 }

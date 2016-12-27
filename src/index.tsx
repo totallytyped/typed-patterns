@@ -8,11 +8,11 @@ import './css/main.styl';
 import './css/draft.styl';
 import '../vendors/joint.min.css';
 
-import Layout from './components/Layout.tsx';
-import IndexPage from './components/IndexPage.tsx';
-import PatternsLayout from './components/PatternsLayout.tsx';
-import PatternsIndex from './components/PatternsIndex.tsx';
-import PatternPage from './components/PatternPage.tsx';
+import Layout from './components/Layout';
+import IndexPage from './components/IndexPage';
+import PatternsLayout from './components/PatternsLayout';
+import PatternsIndex from './components/PatternsIndex';
+import PatternPage from './components/PatternPage';
 
 const appHistory = useRouterHistory(createHashHistory)({ queryKey: false } as any);
 
